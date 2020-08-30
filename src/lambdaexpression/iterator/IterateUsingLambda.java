@@ -12,12 +12,12 @@ public class IterateUsingLambda {
         itemPrice.put("TV", 700);
         itemPrice.put("Monitor", 450);
 
-		// Iterate without using Lambda
-		 for (Map.Entry<String, Integer> entry : itemPrice.entrySet()) {
-		     System.out.println("Item Name: " + entry.getKey() + " and Price: " + entry.getValue());
-		 }
+        // Iterate without using Lambda
+        for (Map.Entry<String, Integer> entry : itemPrice.entrySet()) {
+            System.out.println("Item Name: " + entry.getKey() + " and Price: " + entry.getValue());
+        }
 
         // Please Implement Lambda Iteration on itemPrice map
-
+        itemPrice.forEach((s, integer) -> System.out.println("Price is: " + integer + " for : " + s));
     }
 }
